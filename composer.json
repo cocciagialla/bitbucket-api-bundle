@@ -1,0 +1,23 @@
+{
+    "name": "danielpanzella/bitbucket-api-bundle",
+    "description": "A bundle for the Bitbucket API Client",
+    "type": "symfony-bundle",
+    "require": {
+        "gentle/bitbucket-api": "^1.0"
+    },
+    "autoload":{
+        "psr-4":{
+            "DanielPanzella\\BitbucketAPIBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "Tests/"
+        ]
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Panzella",
+            "email": "daniel.panzella@gmail.com"
+        }
+    ]
+}
