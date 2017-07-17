@@ -2,15 +2,15 @@ parameters:
 
 
 services:
-  bitbucket.oauth.listener:
+  Bitbucket\API\Http\Listener\OAuth2Listener:
     class: Bitbucket\API\Http\Listener\OAuth2Listener
     arguments: [ ~ ]
 
-  bitbucket.http.client:
+  Bitbucket\API\Http\Client:
     class: Bitbucket\API\Http\Client
     calls:
-      - [ addListener, [ '@bitbucket.oauth.listener']]
+      - [ addListener, [ '@Bitbucket\API\Http\Listener\OAuth2Listener']]
 
-  bitbucket.api.client:
+  Bitbucket\API\Api:
     class: Bitbucket\API\Api
-    arguments: [ [], '@bitbucket.http.client' ]
+    arguments: [ [], '@Bitbucket\API\Http\Client' ]

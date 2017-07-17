@@ -31,7 +31,7 @@ class BitbucketAPIExtension extends Extension {
 			"client_secret" => $config['client_secret']
 		];
 
-		$definition = $container->getDefinition('bitbucket.oauth.listener');
+		$definition = $container->getDefinition('Bitbucket\API\Http\Listener\OAuth2Listener');
 		$definition->replaceArgument(0, $bitbucketServiceConfiguration);
 
 	}
