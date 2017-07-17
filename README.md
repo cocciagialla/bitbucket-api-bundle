@@ -10,14 +10,14 @@ bitbucket_api:
     client_secret: < OAuth2 Client Secret >
 ```
 
-##Access the Service:
+## Access the Service:
 
-###By Service ID from the container
+### By Service ID from the container
 ```php
 $this->get('Bitbucket\API\Api');
 ```
 
-###Symfony 3.3+ Autowiring
+### Symfony 3.3+ Autowiring
 ```php
 public function __construct(\Bitbucket\API\Api $bitbucketApi)
 {
