@@ -1,5 +1,5 @@
 {
-    "name": "danielpanzella/bitbucket-api-bundle",
+    "name": "cocciagialla/bitbucket-api-bundle",
     "description": "A bundle for the Bitbucket API Client",
     "type": "symfony-bundle",
     "require": {
