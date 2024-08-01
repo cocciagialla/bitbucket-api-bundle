@@ -19,8 +19,14 @@ class Configuration implements ConfigurationInterface
 	 */
 	public function getConfigTreeBuilder()
 	{
-		$treeBuilder = new TreeBuilder();
-		$rootNode = $treeBuilder->root('bitbucket_api');
+		// Most recent versions of TreeBuilder have a constructor
+	        if (\method_exists(TreeBuilder::class, '__construct')) {
+	            $treeBuilder = new TreeBuilder('bitbucket_api');
+		    $rootNode = $treeBuilder->getRootNode();
+	        } else { // which is not the case for older versions
+	            $treeBuilder = new TreeBuilder;
+	             $rootNode = $treeBuilder->root('bitbucket_api');
+	        }		
 
 		$rootNode
 			->children()
